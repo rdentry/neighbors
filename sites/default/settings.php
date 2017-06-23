@@ -217,9 +217,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'wheelhou_neighbors',
-      'username' => 'wheelhou_rdentry',
-      'password' => 'Rob05061980',
+      'database' => 'wheelhouse_neighbors',
+      'username' => 'root',
+      'password' => 'root',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',

@@ -47,7 +47,7 @@ footer, header, hgroup, menu, nav, section {
  * 1.GLOBAL
  */
 
- html { font-size: 62.5%;  position: relative; min-height: 100%;} 
+html { font-size: 62.5%;  position: relative; min-height: 100%;} 
 
 body {
   background: #fff;
@@ -152,7 +152,7 @@ strong{font-weight: bold;}
 .container {
   margin: 0 auto;
   padding: 0;
-  width: 1000px;
+  max-width: 1000px;
 }
 
 /**
@@ -200,7 +200,7 @@ strong{font-weight: bold;}
  * 5.HEADER
  */
 
-#header {margin: 0; padding: 0; padding-top:25px; margin-bottom:35px;}
+#header {margin: 0; padding: 0; padding-top:25px; margin-bottom:35px; width: 100%;}
 
 #header #logo {
   float: left;
@@ -244,6 +244,21 @@ strong{font-weight: bold;}
   position: absolute;
 }
 
+/* hamburger menu */
+button.menu_trigger {
+  background: url("images/menu_button.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  height: 20px;
+  float:right;
+  width: 24px;
+  border: medium none;
+  display: inline-block;
+  text-indent: -9999px;
+  vertical-align: middle;
+  cursor:pointer;
+  display:none;
+  margin-top:52px;
+}
+
 /* admin tabs */
 
 .tabs-wrapper ul.primary{
@@ -254,7 +269,7 @@ strong{font-weight: bold;}
 /**
  * 7.NODES
  */
-article.node{padding-bottom:35px;}
+article.node{padding-bottom:35px; position: relative;}
 .page-image{float:right; width:306px; display: block; overflow: hidden; margin-left:22px;}
 article.node-news, article.node-staff{padding-bottom:25px;}
 .node-news .page-image, .node-staff .page-image{float:left; width:207px; display: block; overflow: hidden; margin-right:45px; margin-left: 0;}
@@ -353,7 +368,7 @@ body.node-type-project .views_slideshow_main{position: absolute; right: 0; top: 
  */
 
 .node-homepage-featured .page-image{float: left; margin-left: 0; width:692px; position: relative;}
-.node-homepage-featured .content.with-image{margin-right: 0; background: #89171a; color:#fff; float: right; width:308px; height: 241px; padding:34px 18px 0 18px; overflow: hidden;}
+.node-homepage-featured .content.with-image{margin-right: 0; background: #89171a; color:#fff; position: absolute; right: 0px; width:308px; height: 241px; padding:34px 18px 0 18px; overflow: hidden;}
 .node-homepage-featured .content h1, .node-homepage-featured .content h2, .node-homepage-featured .content h3{font-size: 3.4rem; color: #fff; margin-bottom: 15px;}
 .node-homepage-featured .content p{font-size: 1.4rem; line-height: 1.2em; margin-bottom: 15px;}
 
@@ -552,3 +567,41 @@ body.page-node-22 form  fieldset.webform-component--top-group{width:681px; float
 
 /* display block */
 .display-block { display: block; }
+
+/**
+ * Responsive
+ */
+@media only screen and (max-width: 999px) {
+  #header {
+    padding:0 40px 0 40px;
+  }
+
+  #header .region-top-links{
+    display: none;
+  }
+
+  #header #logo {
+    margin: 55px 0 0;
+  }
+
+  #header #logo img {
+    width:237px;
+    height: auto;
+  }
+
+  button.menu_trigger {
+    display:block;
+    margin-top: 88px;
+  }
+
+  #navigation{
+    display:none;
+  }
+
+}
+
+@media only screen and (max-width: 540px) {
+  #featured-home {
+    display: none;
+  }
+}

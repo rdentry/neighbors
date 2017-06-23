@@ -13,6 +13,8 @@
         </a>
       <?php endif; ?>
 
+      <button class="menu_trigger" type="button">Open the menu</button>
+
       <?php print render($page['top_links']); ?>
 
       <?php if ($main_menu || !empty($page['navigation'])): ?>
